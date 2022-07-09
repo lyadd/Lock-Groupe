@@ -1,4 +1,4 @@
-const Discord = require('discord.js');
+const Discord = require('discord.js-selfbot-v13');
 const request = require('request');
 const client = new Discord.Client();
 
@@ -6,9 +6,9 @@ client.on('ready', async () => {
     console.log(`Connecté ${client.user.tag}`)
 })
 
-var addUser = 'your ID'
+var addUser = 'Your ID here'
 
-client.on('message', async message => {
+client.on('messageCreate', async message => {
     if (message.content === '.lock') {
         message.edit('----')
         setInterval(async () => {
@@ -24,4 +24,4 @@ client.on('message', async message => {
     }
 })
 
-client.login('token');
+client.login('')
